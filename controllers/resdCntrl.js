@@ -53,6 +53,7 @@ export const getAllResidencies = asyncHandler(async (req, res) => {
 // function to get a specific document/residency
 export const getResidency = asyncHandler(async (req, res) => {
   const { id } = req.params;
+  console.log(id, 'id')
 
   try {
     const residency = await prisma.residency.findUnique({
